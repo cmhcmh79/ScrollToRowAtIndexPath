@@ -17,11 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-
-
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,71 +29,64 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
     return 10;
-
 }
-
-
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     return 100;
-    
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    NSLog(@"zzz");
-    
     UITableViewCell *cell;
     
     
     if (indexPath.row == 9) {
+        
         cell = [tableView dequeueReusableCellWithIdentifier:@"testCell2"];
+        
         tf = (UITextField*)[cell.contentView viewWithTag:1];
+        
     }else{
+        
         cell = [tableView dequeueReusableCellWithIdentifier:@"testCell"];
+        
     }
     
     return cell;
+    
 }
-
-
 
 
 
 - (IBAction)test:(id)sender {
-//    [tf becomeFirstResponder];
-    
-    
     
     NSIndexPath *nextIndexPath = [NSIndexPath indexPathForRow:9 inSection:0];
-    
-//    [self.tableView scrollToRowAtIndexPath:nextIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
-//    [tf becomeFirstResponder];
-    
-    
 
-//    [self.tableView scrollToRowAtIndexPath:nextIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES completion:^{
-//        NSLog(@"다돠ㅣㅆ다.");
-//        [tf becomeFirstResponder];
-//    }];
+    [self.tableView scrollToRowAtIndexPath:nextIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES completion:^{
+        NSLog(@"scrollViewDidEndScrollingAnimation Category");
+        [tf becomeFirstResponder];
+    }];
     
+}
+
+
+- (IBAction)test2:(id)sender {
     
-//    [self.tableView scrollToRowAtIndexPath:nextIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES completion:nil];
+    NSIndexPath *nextIndexPath = [NSIndexPath indexPathForRow:9 inSection:0];
 
     [self.tableView scrollToRowAtIndexPath:nextIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:YES];
 }
-
 
 #pragma ScrollView Delegate
 
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
-    NSLog(@"local end");
+    
+    NSLog(@"scrollViewDidEndScrollingAnimation Original");
     
 }
 

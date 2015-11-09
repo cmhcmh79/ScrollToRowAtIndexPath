@@ -10,11 +10,17 @@
 #import "UITableView+ScrollWithCallback.h"
 
 @interface ViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+    
     UITextField *tf;
+    
 }
 
-- (IBAction)test:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)test:(id)sender;
+
+- (IBAction)test2:(id)sender;
+
 
 @end
 

@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		9FE2BAE31BF0641900C47340 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2BAE21BF0641900C47340 /* main.m */; };
 		9FE2BAE61BF0641900C47340 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2BAE51BF0641900C47340 /* AppDelegate.m */; };
-		9FE2BAE91BF0641900C47340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2BAE81BF0641900C47340 /* ViewController.m */; };
-		9FE2BAEC1BF0641900C47340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE2BAEA1BF0641900C47340 /* Main.storyboard */; };
 		9FE2BAEE1BF0641900C47340 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE2BAED1BF0641900C47340 /* Images.xcassets */; };
 		9FE2BAF11BF0641900C47340 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FE2BAEF1BF0641900C47340 /* LaunchScreen.xib */; };
 		9FE2BAFD1BF0641900C47340 /* ScrollToRowAtIndexPathTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2BAFC1BF0641900C47340 /* ScrollToRowAtIndexPathTests.m */; };
+		9FE2BB091BF064B900C47340 /* UITableView+ScrollWithCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2BB081BF064B900C47340 /* UITableView+ScrollWithCallback.m */; };
+		9FE2BB0C1BF064CE00C47340 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FE2BB0B1BF064CE00C47340 /* ViewController.m */; };
+		9FE2BB0E1BF064D900C47340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE2BB0D1BF064D900C47340 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		9FE2BAE21BF0641900C47340 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9FE2BAE41BF0641900C47340 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9FE2BAE51BF0641900C47340 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9FE2BAE71BF0641900C47340 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9FE2BAE81BF0641900C47340 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		9FE2BAEB1BF0641900C47340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FE2BAED1BF0641900C47340 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9FE2BAF01BF0641900C47340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		9FE2BAF61BF0641900C47340 /* ScrollToRowAtIndexPathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollToRowAtIndexPathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE2BAFB1BF0641900C47340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FE2BAFC1BF0641900C47340 /* ScrollToRowAtIndexPathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollToRowAtIndexPathTests.m; sourceTree = "<group>"; };
+		9FE2BB071BF064B900C47340 /* UITableView+ScrollWithCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+ScrollWithCallback.h"; sourceTree = "<group>"; };
+		9FE2BB081BF064B900C47340 /* UITableView+ScrollWithCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+ScrollWithCallback.m"; sourceTree = "<group>"; };
+		9FE2BB0A1BF064CE00C47340 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9FE2BB0B1BF064CE00C47340 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9FE2BB0D1BF064D900C47340 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +84,12 @@
 		9FE2BADF1BF0641900C47340 /* ScrollToRowAtIndexPath */ = {
 			isa = PBXGroup;
 			children = (
+				9FE2BB061BF0649F00C47340 /* Category */,
 				9FE2BAE41BF0641900C47340 /* AppDelegate.h */,
 				9FE2BAE51BF0641900C47340 /* AppDelegate.m */,
-				9FE2BAE71BF0641900C47340 /* ViewController.h */,
-				9FE2BAE81BF0641900C47340 /* ViewController.m */,
-				9FE2BAEA1BF0641900C47340 /* Main.storyboard */,
+				9FE2BB0A1BF064CE00C47340 /* ViewController.h */,
+				9FE2BB0B1BF064CE00C47340 /* ViewController.m */,
+				9FE2BB0D1BF064D900C47340 /* Main.storyboard */,
 				9FE2BAED1BF0641900C47340 /* Images.xcassets */,
 				9FE2BAEF1BF0641900C47340 /* LaunchScreen.xib */,
 				9FE2BAE01BF0641900C47340 /* Supporting Files */,
@@ -117,6 +121,15 @@
 				9FE2BAFB1BF0641900C47340 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FE2BB061BF0649F00C47340 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9FE2BB071BF064B900C47340 /* UITableView+ScrollWithCallback.h */,
+				9FE2BB081BF064B900C47340 /* UITableView+ScrollWithCallback.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE2BAEC1BF0641900C47340 /* Main.storyboard in Resources */,
+				9FE2BB0E1BF064D900C47340 /* Main.storyboard in Resources */,
 				9FE2BAF11BF0641900C47340 /* LaunchScreen.xib in Resources */,
 				9FE2BAEE1BF0641900C47340 /* Images.xcassets in Resources */,
 			);
@@ -219,8 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE2BAE91BF0641900C47340 /* ViewController.m in Sources */,
 				9FE2BAE61BF0641900C47340 /* AppDelegate.m in Sources */,
+				9FE2BB091BF064B900C47340 /* UITableView+ScrollWithCallback.m in Sources */,
+				9FE2BB0C1BF064CE00C47340 /* ViewController.m in Sources */,
 				9FE2BAE31BF0641900C47340 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +258,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9FE2BAEA1BF0641900C47340 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FE2BAEB1BF0641900C47340 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9FE2BAEF1BF0641900C47340 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,6 +422,7 @@
 				9FE2BB021BF0641900C47340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9FE2BB031BF0641900C47340 /* Build configuration list for PBXNativeTarget "ScrollToRowAtIndexPathTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				9FE2BB051BF0641900C47340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

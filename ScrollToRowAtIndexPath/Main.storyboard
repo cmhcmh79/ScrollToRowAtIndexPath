@@ -60,7 +60,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga9-93-zXG">
-                                <rect key="frame" x="26" y="543" width="46" height="30"/>
+                                <rect key="frame" x="26" y="497" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="Aiw-br-N8Z"/>
                                     <constraint firstAttribute="height" constant="30" id="icE-Gd-Scb"/>
@@ -72,15 +72,30 @@
                                     <action selector="test:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JWK-fY-51E"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flT-mH-oRH">
+                                <rect key="frame" x="26" y="545" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6pq-8Y-gnC"/>
+                                    <constraint firstAttribute="width" constant="46" id="S8x-Pp-Fen"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="test2:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hLA-dH-D3R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ga9-93-zXG" secondAttribute="bottom" constant="27" id="GXg-5h-pfk"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="flT-mH-oRH" secondAttribute="bottom" constant="25" id="6lI-HB-Dvu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ga9-93-zXG" secondAttribute="bottom" constant="73" id="GXg-5h-pfk"/>
                             <constraint firstItem="ZpP-MX-kaF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="aWG-Fr-2ET"/>
                             <constraint firstItem="ga9-93-zXG" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="26" id="ell-nW-9o4"/>
                             <constraint firstItem="ZpP-MX-kaF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="kpE-kH-xgy"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ZpP-MX-kaF" secondAttribute="bottom" constant="212" id="nIa-cw-iZO"/>
                             <constraint firstAttribute="trailing" secondItem="ZpP-MX-kaF" secondAttribute="trailing" id="p2F-DL-fbM"/>
+                            <constraint firstItem="flT-mH-oRH" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="26" id="pQi-Hj-j9N"/>
                         </constraints>
                     </view>
                     <connections>

@@ -17,6 +17,8 @@ static const void *UICategoryVTestKey               = &UICategoryVTestKey;
 
 @implementation UITableView (ScrollWithCallback)
 
+#pragma mark - scrollToRowAtIndexPath Function
+
 -(void)scrollToRowAtIndexPath:(NSIndexPath * __nullable )indexPath
              atScrollPosition:(UITableViewScrollPosition)scrollPosition
                      animated:(BOOL)animated
@@ -26,31 +28,37 @@ static const void *UICategoryVTestKey               = &UICategoryVTestKey;
     if (self.delegate != (id<UITableViewDataSource, UITableViewDelegate>)self) {
         
         objc_setAssociatedObject(self, UITableViewOrginDelegateKey, self.delegate, OBJC_ASSOCIATION_ASSIGN);
+        
         self.delegate = (id<UITableViewDataSource, UITableViewDelegate>)self;
         
     }
-
+    
     self.completionBlock = CompletionBlock;
     
-    self.testString = @"1111";
-
+    self.testString = @"testString";
+    
     [self scrollToRowAtIndexPath:indexPath atScrollPosition:scrollPosition animated:animated];
-
+    
 }
 
 
-//스크롤 get set 처리 함수
+#pragma mark -  Getter Setter
+
 - (CompletionBlock)completionBlock {
+    
     return objc_getAssociatedObject(self, UITableViewScrollDelegateKey);
+    
 }
 
 - (void)setCompletionBlock:(CompletionBlock)completionBlock {
+    
     objc_setAssociatedObject(self, UITableViewScrollDelegateKey, completionBlock, OBJC_ASSOCIATION_COPY);
+    
 }
 
 
-
 - (NSString*)testString {
+    
     return objc_getAssociatedObject(self, UICategoryVTestKey);
 }
 
@@ -60,27 +68,24 @@ static const void *UICategoryVTestKey               = &UICategoryVTestKey;
 
 
 
-#pragma ScrollView Delegate
+#pragma mark -  ScrollView Delegate
 
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
 {
     NSLog(@"%@", self.testString);
-
+    
     if (self.completionBlock) {
         self.completionBlock();
     }
-
+    
     id originalDelegate = objc_getAssociatedObject(self, UITableViewOrginDelegateKey);
+    
     if (originalDelegate && [originalDelegate respondsToSelector:@selector(scrollViewDidEndScrollingAnimation:)]) {
+        
         [originalDelegate scrollViewDidEndScrollingAnimation:scrollView];
     }
-
+    
 }
-
-
-
-
-
 
 
 
